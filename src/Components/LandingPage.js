@@ -1,5 +1,3 @@
-import React from "react";
-
 function LandingPage() {
   var text = ["Design", " ", "Create", " ", "Render", " ", "Showcase"];
 //   const [user, loading] = useAuthState(auth);
@@ -40,3 +38,4 @@ function LandingPage() {
 }
 
 export default LandingPage;
+
