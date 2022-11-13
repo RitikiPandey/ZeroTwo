@@ -1,5 +1,5 @@
+import {useEffect} from "react";
 import { Route, Routes } from "react-router-dom"
-
 import Navbar from './Components/Navbar';
 import './App.css';
 import LandingPage from './Components/LandingPage';
@@ -9,9 +9,20 @@ import Login from "./Pages/Login";
 
 
 function App() {
+  useEffect(() => {
+    //for running the script to toggle the the navbar
+    const script = document.createElement('script');
+    script.src = "script.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
   return (
     <>
-    <div className="cursor"></div>
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
