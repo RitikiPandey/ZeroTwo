@@ -6,11 +6,13 @@ import LandingPage from './Components/LandingPage';
 import Footer from './Components/Footer';
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
+import Foot from "./Components/Foot";
 
 
 function App() {
   return (
     <>
+    <div className="cursor"></div>
       <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
