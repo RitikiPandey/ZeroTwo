@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function NavItem({ href, isActive, children }) {
+function NavItem({ href, isActive, children }) {
     return (
     <li>
         <a
@@ -12,4 +12,6 @@ export default function NavItem({ href, isActive, children }) {
     </li>
     )
 }
+
+export default NavItem;
 
