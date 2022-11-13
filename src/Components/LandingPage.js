@@ -1,41 +1,35 @@
-function LandingPage() {
+import React from "react";
+
+const LandingPage = ({ user }) => {
   var text = ["Design", " ", "Create", " ", "Render", " ", "Showcase"];
-//   const [user, loading] = useAuthState(auth);
   return (
-    <div className="flex flex-col items-center justify-center text-center absolute h-full w-full gap-y-24">
-      <div className="text-7xl">
-        <div className="box-content overflow-hidden h-20">
-          {text.map((item) => {
-            return (
-              <span className="text-19xl font-bold text-sky-500 block h-full pr-3 animate-bounce  text-center ">
-                {item}
-              </span>
-            );
-          })}
+    <div className="text-white bg-black">
+      <div className="max-w-[800px]  w-full h-screen mx-auto text-center flex flex-col justify-center">
+        <div className="flex justify-center items-center">
+          <p className="md:text-5xl sm:text-4xl text-xl font-bold py-4 animate-bounce">
+            {text.map((item) => {
+              return (
+                <span className="text-19xl font-bold text-sky-500 block h-full pr-3 text-center ">
+                  {item}
+                </span>
+              );
+            })}
+          </p>
         </div>
-        <div className="">
-          <p>Your imagination to this world</p>
-        </div>
-      </div>
-      <div className="text-2xl w-3/6 flex items-center flex-col gap-12">
-        <p>
+        <h1 className="md:text-5xl sm:text-6xl text-4xl font-bold md:py-6">
+          Your imagination to this world
+        </h1>
+        <p className="md:text-2xl text-xl font-bold text-gray-500">
           ZeroTwo connects everyone in the production process of animation so
           the team can deliver better results, faster.
         </p>
-        {
-        // !user &&    
-        (
-          <a
-            className="block text-center px-3 py-2 rounded-md bg-sky-500 text-white w-3/12"
-            href="/login"
-          >
-            Get Started
-          </a>
-        )}
+
+        <button className="bg-sky-500 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">
+          Get Started
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default LandingPage;
-
