@@ -11,7 +11,7 @@ function Footer() {
                     <div className="lg:flex">
                         <div className="w-full -mx-6 lg:w-2/5">
                             <div className="px-6">
-                                <div className='w-28 name'>
+                                <div className='w-28'>
                                     {/* <Link to="#" className="text-xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">IEEE SB</Link> */}
                                     {/* <Link to="/" classname="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">ZeroTwo</Link> */}
                                     <Link to="#" className="block mt-2 text-3xl text-sky-500 dark:text-sky-500 font-bold hover:text-sky-600">ZeroTwo</Link>
