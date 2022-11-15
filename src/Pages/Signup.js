@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 function Signup() {
     return (
         <>
@@ -44,7 +44,7 @@ function Signup() {
                                     </div>
                                     <p className='text-sm px-2'>Already have account? <Link to="/login" className='underline'>login</Link></p>
                                     <div className="p-2 w-full">
-                                        <button className="flex mx-auto border hover:shadow-sky-500 border-sky-500 px-3 py-1 font-medium rounded-lg  text-sky-500 hover:bg-sky-500 hover:text-slate-900  text-lg" type='submit' >Signup</button>
+                                        <Link to="/dashboard"><button className="flex mx-auto border hover:shadow-sky-500 border-sky-500 px-3 py-1 font-medium rounded-lg  text-sky-500 hover:bg-sky-500 hover:text-slate-900  text-lg" type='submit' >Signup</button></Link>
                                     </div>
                                 </div>
                             </form>
