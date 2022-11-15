@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 
@@ -8,19 +8,19 @@ const LandingPage = ({ user }) => {
     <div className="text-black bg-white">
       <div className="max-w-[900px] w-full h-screen mx-auto p-2 text-center flex flex-col justify-center">
         <div className="flex justify-center items-center">
-          <p className="md:text-5xl sm:text-4xl text-xl font-bold py-4">
+          <div className="md:text-5xl sm:text-4xl text-xl font-bold py-4">
             <div className="box-content overflow-hidden h-20">
               {text.map((item) => {
                 return (
-                  <span className="text-19xl font-bold text-sky-500 block h-full pr-3 text-center     animate-bounce">
+                  <span className="text-19xl font-bold text-sky-500 block h-full pr-3 text-center   animate-bounce">
                     {item}
                   </span>
                 );
               })}
             </div>
-          </p>
+          </div>
         </div>
-        <div justify-center items-center mt-auto>
+        <div className="justify-center items-center">
           <h1 className="md:text-5xl sm:text-6xl py-10 text-4xl font-bold md:py-6">
             Your imagination to this world
           </h1>
@@ -58,7 +58,7 @@ const LandingPage = ({ user }) => {
             eveniet ex deserunt fuga?
           </p>
           <a
-            href="https://www.ieee.org/"
+            href="/"
             target="_blank"
             rel="noreferrer"
             className="flex font-serif font-medium underline text-sky-400 hover:text-sky-500 cursor-pointer text-xl my-2 mx-auto md:mx-0 py-3"
@@ -80,7 +80,7 @@ const LandingPage = ({ user }) => {
             eveniet ex deserunt fuga?
           </p>
           <a
-            href="https://www.ieee.org/"
+            href="/"
             target="_blank"
             rel="noreferrer"
             className="flex font-serif font-medium underline text-sky-400 hover:text-sky-500 cursor-pointer text-xl my-2 mx-auto md:mx-0 py-3"

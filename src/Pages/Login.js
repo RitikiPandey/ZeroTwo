@@ -28,7 +28,7 @@ function Login() {
                                             <p className='text-sm'>New here? <Link to="/signup" className='underline'>SignUp</Link></p>
                                         </div>
                                         <div className="relative">
-                                            <button className="border hover:shadow-sky-500 border-sky-500 px-3 py-1 font-medium rounded-lg  text-sky-500 hover:bg-sky-500 hover:text-slate-900  text-lg" type='submit'>Login</button>
+                                            <Link to="/dashboard"><button className="border hover:shadow-sky-500 border-sky-500 px-3 py-1 font-medium rounded-lg  text-sky-500 hover:bg-sky-500 hover:text-slate-900  text-lg" type='submit'>Login</button></Link>
                                         </div>
                                     </div>
                                 </div>
