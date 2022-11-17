@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-zerotwo-dev-112953-authRole",
+      "UnauthRoleArn": "arn:aws:iam::949743326506:role/amplify-zerotwo-dev-112953-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::949743326506:role/amplify-zerotwo-dev-112953-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-zerotwo-dev-112953-deployment",
+      "UnauthRoleName": "amplify-zerotwo-dev-112953-unauthRole",
+      "StackName": "amplify-zerotwo-dev-112953",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:949743326506:stack/amplify-zerotwo-dev-112953/bdcc8ab0-64aa-11ed-95d3-0a98e26d4013",
+      "AmplifyAppId": "d1utv13fr9y8k5"
+    },
+    "categories": {
+      "auth": {
+        "zerotwo55f0c4d5": {}
+      }
+    }
+  }
+}

@@ -1,6 +1,28 @@
-import React from 'react'
+import { Auth } from 'aws-amplify';
+import React, { useState } from 'react'
 import {MdUpload} from 'react-icons/md'
+import { useNavigate } from 'react-router';
+
 function Dashboard() {
+
+    const nav= useNavigate();
+async function LogoutHandler() {
+    try {
+        let res=await Auth.signOut();
+        console.log(res);
+        //nav('/DashBoard')
+        
+    } catch (error) {
+        console.log('error signing out: ', error);
+    }
+}
+        const [User, setUser] = useState("")
+        Auth.currentAuthenticatedUser().then((res)=>{
+            // res.preventDefault()
+            setUser(res)
+        });
+      
+        
     return (
         <>
             <main>
@@ -12,7 +34,7 @@ function Dashboard() {
                                     <div className='hero container max-w-screen-lg mx-auto flex justify-center'>
                                         <img src="https://www.w3schools.com/w3css/img_avatar3.png" className='w-2/3 rounded-full ring-2' alt="" />
                                     </div>
-                                    <h1 className='text-blue-600 text-lg text-center font-medium'>Jhon Doe</h1>
+                                    <h1 className='text-blue-600 text-lg text-center font-medium'>{(User)?User.attributes.email:"JOHN DOE"}</h1>
                                 </div>
                                 <hr />
                                 <ul className="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
@@ -33,7 +55,7 @@ function Dashboard() {
                                     </li>
                                     <li className="mr-3 flex-1">
                                         <a href="/" className="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-red-500">
-                                            <i className="fa fa-wallet pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Payments</span>
+                                            <i className="fa fa-wallet pr-0 md:pr-3"></i><span onClick={LogoutHandler} className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">LogOut</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -197,5 +219,4 @@ function Dashboard() {
         </>
     )
 }
-
-export default Dashboard
+ export default Dashboard;

@@ -8,7 +8,13 @@ import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
 import Signup from "./Pages/Signup";
 
+import VerifyOTP from "./Pages/VerifyOTP";
+import { Amplify, Hub } from "aws-amplify";
+import awsmobile from "./aws-exports";
+import { AuthProvider } from "./Auth";
 
+
+Amplify.configure(awsmobile);
 
 function App() {
   useEffect(() => {
@@ -17,21 +23,25 @@ function App() {
     script.src = "script.js";
     script.async = true;
 
+     
+  
     document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    }
+  
   }, []);
   return (
     <>
       <Navbar />
+      {/* <AuthProvider> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        
+        <Route path="/OTPVerification" element={<VerifyOTP />} />
       </Routes>
+      {/* </AuthProvider> */}
       <Footer />
     </>
   );
